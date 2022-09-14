@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./inter/Inter-Regular.woff2") format("woff2"),
+         url("./inter/Inter-Regular.woff") format("woff");
+  }
 *,
 *::before,
 *::after {
@@ -15,7 +23,7 @@ body {
     background-image: url(bg-gradient.png);
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
 
 }
 
@@ -105,10 +113,6 @@ body {
     font-weight: 200;
 }
 
-.link-item:hover {
-    transform: scale(1.1);
-    transition: transform .3s ease;
-}
 
 .link-item__content {
     color: #e6e6e6;
@@ -143,12 +147,12 @@ body {
 }
 
 .island__link {
-    background: rgba(0, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.80);
     border-radius: 40px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(9.3px);
     -webkit-backdrop-filter: blur(9.3px);
-    border: 1px solid rgba(0, 0, 0, 1);
+    /* border: 1px solid rgba(0, 0, 0, 1); */
     overflow: hidden;
     transition: transform .3s ease;
     color: whitesmoke;
@@ -156,7 +160,18 @@ body {
     text-decoration: none;
 }
 
-.island__link:hover {
-    transform: scale(1.1);
-    transition: transform .3s ease;
+
+@media (min-width: 640px) {
+    .island__link:hover {
+        transform: scale(1.1);
+        transition: transform .3s ease;
+    }
+    
+    
+    
+    .link-item:hover {
+        transform: scale(1.1);
+        transition: transform .3s ease;
+    }
+    
 }
