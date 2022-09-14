@@ -155,3 +155,8 @@ body {
     padding: 10px 20px;
     text-decoration: none;
 }
+
+.island__link:hover {
+    transform: scale(1.1);
+    transition: transform .3s ease;
+}
