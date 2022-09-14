@@ -1,26 +1,29 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-  }
-  
-  * {
-    margin: 0;
-  }
+}
 
-  html, body {
+* {
+    margin: 0;
+}
+
+html,
+body {
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-image: radial-gradient(circle, #010101, #2e2e2e, #595859, #888686, #bab8b7, #d1c1b7, #e5cbb5, #f5d7b2, #f2b781, #f09357, #ef6937, #ec2c24);
     font-family: Arial, Helvetica, sans-serif;
 
-  }
+}
 
-  .site-wrapper {
+.site-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .site-main {
+.site-main {
     flex: 1 1 0%;
     flex-direction: column;
     -moz-box-pack: justify;
@@ -29,45 +32,50 @@
     height: 100%;
     width: 100%;
     max-width: 680px;
-  }
+}
 
-  .profile {
+.profile {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-  }
+}
 
-  .profile__title {
+.profile__title {
     color: white;
     text-align: center;
     margin: 25px 0 7px 0;
-  }
-  
-  .profile__subtitle {
+}
+
+.profile__subtitle {
     color: rgba(255, 255, 255, .7);
     text-align: center;
     /* margin-top: 10px; */
-  }
+}
 
-  .profile__picture {
+.profile__picture {
     border-radius: 50%;
     width: 96px;
     height: 96px;
     object-fit: cover;
-  }
-  
+}
 
-  .links-list {
+
+.links-list {
     padding-left: 0;
     list-style: none;
     width: 100%;
     margin-top: 50px;
-  }
+}
 
-  .link-item {
+.link-item {
     /* border: black solid 1px; */
-    background-color: #222222;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.3px);
+    -webkit-backdrop-filter: blur(9.3px);
+    border: 1px solid rgba(0, 0, 0, 1);
     overflow: hidden;
     border-radius: 5px;
     transition: transform .3s ease;
@@ -78,20 +86,33 @@
     cursor: pointer;
     margin: 15px auto;
 
-  }
+}
 
-  .link-item a {
+.link-item a {
     color: white;
     text-decoration: none;
     font-size: 21px;
-  }
+}
 
-  .link-item:hover {
+.link-item:hover {
     transform: scale(1.1);
     transition: transform .3s ease;
-  }
+}
 
-  .link-item__content {
+.link-item__content {
     color: #e6e6e6;
     text-decoration: none;
-  }
+}
+
+.island {
+    color: black;
+    width: 100%;
+    height: 60px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.3px);
+    -webkit-backdrop-filter: blur(8.3px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
