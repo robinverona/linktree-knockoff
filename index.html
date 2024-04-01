@@ -5,31 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Robin Verona — Index</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div onclick="toggleDrawer()" class="overlay"></div>
     <div class="site-wrapper">
         <main id="main" class="site-main">
             <aside class="island">
-                <a href="#" class="island__link share">Share</a>
+                <a href="#" onclick="toggleDrawer()"  class="island__link share">Partager</a>
                 <!-- <img src="profile.png" class="island__picture" alt="User profile picture"> -->
-                <a href="#" class="island__link email">Email me</a>
+                <a href="mailto:contact@robinverona.com" class="island__link email">M'écrire</a>
             </aside>
             <header class="profile">
                 <img src="profile.png" class="profile__picture" alt="User profile picture">
                 <h1 class="profile__title">
                     Robin Verona
                 </h1>
-                <h2 class="profile__subtitle">
-                    Front-end developer
-                </h2>
+                <!-- <h2 class="profile__subtitle">
+                    Développeur Front-end & Designer en reconversion
+                </h2> -->
             </header>
             <ul class="links-list">
-                <li class="link-item">
+                <!-- <li class="link-item">
                     <a target="_blank" href="http://robinverona.com">
                         Portfolio
+                    </a>
+                </li> -->
+                <li class="link-item">
+                    <a target="_blank" href="https://forms.gle/ywqFH1Dw2YrQYLQK9">
+                        Formulaire Rap ou Poésie
                     </a>
                 </li>
                 <li class="link-item">
@@ -37,11 +43,7 @@
                         Instagram
                     </a>
                 </li>
-                <li class="link-item">
-                    <a href="#">
-                        LinkedIn
-                    </a>
-                </li>
+
 
                 <li class="link-item">
                     <a target="_blank" href="https://github.com/robinverona">
@@ -54,11 +56,19 @@
                     </a>
                 </li> -->
             </ul>
-            <footer>
-
-            </footer>
+            <div class="modal">
+                <h2>Partager cette page</h2>
+                <button onclick="copyText()" class="copy-link">
+                    <div>
+                        <img src="./copy.gif" alt="">
+                        <span class="content">index.robinverona.com</span>
+                    </div>
+                    <span id="copy-state">Copier</span>
+                </button>
+                <button id="close">Fermer</button>
+            </div>
         </main>
     </div>
 </body>
-
+<script src="./index.js"></script>
 </html>
